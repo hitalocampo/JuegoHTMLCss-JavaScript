@@ -5,13 +5,32 @@ let explosion=document.getElementById('explosion');
 let live=document.querySelector('i');
 let times=document.getElementById('times');
 let lives=5;
-let second=10;
+let second=30;
+let cantidad = 100
+
+window.addEventListener("keydown", (e) => {
+    let tecla = e.key;
+    console.log(e.key);
+    switch (tecla) {
+      case "ArrowRight":
+        cantidad += 100;
+        nave.style.transform = `translateX(${cantidad}px) `;
+        break;
+      case "ArrowLeft":
+        cantidad -= 100;
+        nave.style.transform = `translateX(${cantidad}px)`;
+      default:
+        break;
+    }
+  });
+
 setInterval(() => {
     second--;
     times.textContent=second;
     if (second==0){
         alert('tu Ganas!');
         location.reload();
+        window.location.replace("./inicio/segunaPantalla/inicio2.html");
        
     }
 }, 1000);
@@ -64,7 +83,7 @@ setInterval(()=>{
 let aparecer=0;
 setInterval(()=>{
     aparecer++;
-    if (aparecer%5==0){
+    if (aparecer%10==0){
         let enemigo=document.createElement('div');
         enemigo.classList.add('enemigo');
         body.append(enemigo);

@@ -5,7 +5,7 @@ let explosion=document.getElementById('explosion');
 let live=document.querySelector('i');
 let times=document.getElementById('times');
 let lives=5;
-let second=10;
+let second=40;
 let cantidad = 100
 
 window.addEventListener("keydown", (e) => {
@@ -87,7 +87,7 @@ setInterval(()=>{
 let aparecer=0;
 setInterval(()=>{
     aparecer++;
-    if (aparecer%5==0){
+    if (aparecer%9==0){
         let enemigo=document.createElement('div');
         enemigo.classList.add('enemigo');
         body.append(enemigo);
