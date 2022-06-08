@@ -46,7 +46,7 @@ setInterval(()=>{
         enemigos.forEach(enemigo => {
             if (bala.getBoundingClientRect().top<=enemigo.getBoundingClientRect().top+50){
                 if (bala.getBoundingClientRect().left>=enemigo.getBoundingClientRect().left && bala.getBoundingClientRect().left<=enemigo.getBoundingClientRect().left+80){
-                    enemigo.style.backgroundImage='url("img/explosion.png")';
+                    enemigo.style.backgroundImage='url("../images/explosion.png")';
                     explosion.play();
                    setTimeout(() => {
                        enemigo.remove();
