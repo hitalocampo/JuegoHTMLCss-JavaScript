@@ -56,6 +56,21 @@ i{
   color:lightcoral;
 }
 
+.pasar{
+  border: 1px solid rgb(65, 55, 55);
+  position: absolute;
+  top: 70px;
+  left: 10px;
+  text-decoration: none;
+  color:rgb(243, 36, 21);
+  border-radius: 5px;
+  font-size: 20px; 
+
+  background-color: rgb(117, 117, 218);
+  color: white;
+ 
+}
+
 
 
 

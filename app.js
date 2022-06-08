@@ -28,7 +28,7 @@ setInterval(() => {
     second--;
     times.textContent=second;
     if (second==0){
-        alert('tu Ganas!');
+        alert('has Ganado PASAR AL SIGUIENTE NIVEL!');
         location.reload();
         window.location.replace("./inicio/segunaPantalla/inicio2.html");
        
