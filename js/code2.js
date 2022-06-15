@@ -7,6 +7,8 @@ let times=document.getElementById('times');
 let lives=5;
 let second=40;
 let cantidad = 100
+var sonidoperdedor = document.getElementById("blender-sound")
+var sonidoganador= document.getElementById("blender-button-sound")
 
 window.addEventListener("keydown", (e) => {
     let tecla = e.key;
@@ -28,6 +30,7 @@ setInterval(() => {
     second--;
     times.textContent=second;
     if (second==0){
+        sonidoganador.play()
         alert('tu Ganas!');
         location.reload();
        
@@ -100,6 +103,7 @@ setInterval(()=>{
               lives--;
               live.textContent=lives;
               if (lives==-1){
+                sonidoperdedor.play()
                   alert('Game Over');
                   location.reload();
               }
