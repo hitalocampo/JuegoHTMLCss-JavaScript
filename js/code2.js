@@ -87,7 +87,7 @@ setInterval(()=>{
 let aparecer=0;
 setInterval(()=>{
     aparecer++;
-    if (aparecer%3==0){
+    if (aparecer%5==0){
         let enemigo=document.createElement('div');
         enemigo.classList.add('enemigo');
         body.append(enemigo);
