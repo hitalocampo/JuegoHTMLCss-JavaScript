@@ -7,8 +7,9 @@ let times=document.getElementById('times');
 let lives=5;
 let second=30;
 let cantidad = 100
-var sonidoperdedor = document.getElementById("blender-sound")
-var sonidoganador= document.getElementById("blender-button-sound")
+var sonidoperdedor = document.getElementById("blender-sound");
+var sonidoganador= document.getElementById("blender-button-sound");
+let sonidoJuego= document.getElementById("soni-juego");
 
 window.addEventListener("keydown", (e) => {
     let tecla = e.key;
@@ -26,11 +27,19 @@ window.addEventListener("keydown", (e) => {
     }
   });
 
+document.addEventListener('keydown', function(event){
+    if(event.keyCode == 80) // reinicia el juego
+    {
+     location.reload();
+    }
+});
+
 setInterval(() => {
     second--;
     times.textContent=second;
     if (second==0){
         sonidoganador.play()
+        sonidoJuego.pause();
         alert('has Ganado PASAR AL SIGUIENTE NIVEL!' );
         location.reload();
         window.location.replace("./inicio/segunaPantalla/inicio2.html");
@@ -103,6 +112,7 @@ setInterval(()=>{
               live.textContent=lives;
               if (lives==-1){
                 sonidoperdedor.play()
+                sonidoJuego.pause();
                   alert('Game Over');
                   location.reload();
               }
