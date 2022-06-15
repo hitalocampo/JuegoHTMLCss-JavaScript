@@ -7,6 +7,8 @@ let times=document.getElementById('times');
 let lives=5;
 let second=30;
 let cantidad = 100
+var sonidoperdedor = document.getElementById("blender-sound")
+var sonidoganador= document.getElementById("blender-button-sound")
 
 window.addEventListener("keydown", (e) => {
     let tecla = e.key;
@@ -28,9 +30,13 @@ setInterval(() => {
     second--;
     times.textContent=second;
     if (second==0){
-        alert('has Ganado PASAR AL SIGUIENTE NIVEL!');
+        sonidoganador.play()
+        alert('has Ganado PASAR AL SIGUIENTE NIVEL!' );
         location.reload();
         window.location.replace("./inicio/segunaPantalla/inicio2.html");
+        
+        
+
        
     }
 }, 1000);
@@ -96,6 +102,7 @@ setInterval(()=>{
               lives--;
               live.textContent=lives;
               if (lives==-1){
+                sonidoperdedor.play()
                   alert('Game Over');
                   location.reload();
               }
