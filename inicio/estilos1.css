@@ -24,6 +24,37 @@ body{
     border-radius: 10px;
       
 }
+.instruciones{
+    background-color:rgb(23, 12, 54);
+    width: 20%;
+    margin-top: 10px;
+    margin-left: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 40px 10px rgb(114, 155, 172);
+    position: absolute;
+}
+
+.texto-i{
+    padding: 10px;
+    color: white;
+    
+}
+
+#instructivo{
+    color: rgb(248, 239, 239);
+    font-size: 25px;
+    margin-top: 100px;
+    margin-left: 10px;
+}
+.instruciones-1{
+    background-color:rgb(23, 12, 54);
+    width: 20%;
+    margin-top: 230px;
+    margin-left: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 40px 10px rgb(114, 155, 172);
+    position: absolute;
+}
 
 #nave{
   
