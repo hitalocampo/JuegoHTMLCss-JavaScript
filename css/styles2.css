@@ -6,7 +6,7 @@
   .nave{
     width: 80px;
     height: 80px;
-    background-image: url('../images/wall.jpg');
+    background-image: url('../images/nave.png');
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
